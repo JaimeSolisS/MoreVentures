@@ -25,7 +25,7 @@ const CoolSection = () => {
   return (
     <CoolContainer>
       <CoolBackground>
-        <VideoBackground autoPlay loop muted src={Video} type="video/mp4" />
+        <VideoBackground autoPlay loop muted src={Video4} type="video/mp4" />
       </CoolBackground>
       <CoolContent>
         <CoolH1>
