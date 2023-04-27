@@ -3,8 +3,8 @@ import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 import { colors } from "../../styles/colors";
 
-export const Nav = styled.nav `
-  background: ${colors.black};
+export const Nav = styled.nav`
+  background: ${({ scrollNav }) => (scrollNav ? "#000" : "transparent")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -19,7 +19,7 @@ export const Nav = styled.nav `
   }
 `;
 
-export const NavbarContainer = styled.div `
+export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -29,8 +29,7 @@ export const NavbarContainer = styled.div `
   max-width: 1100px;
 `;
 
-export const NavLogo = styled(LinkRouter)
-`
+export const NavLogo = styled(LinkRouter)`
   color: ${colors.white};
   justify-self: flex-start;
   cursor: pointer;
@@ -42,7 +41,7 @@ export const NavLogo = styled(LinkRouter)
   text-decoration: none;
 `;
 
-export const MobileIcon = styled.div `
+export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -57,7 +56,7 @@ export const MobileIcon = styled.div `
   }
 `;
 
-export const NavMenu = styled.ul `
+export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
@@ -69,12 +68,11 @@ export const NavMenu = styled.ul `
   }
 `;
 
-export const NavItem = styled.li `
+export const NavItem = styled.li`
   height: 80px;
 `;
 
-export const NavLinks = styled(LinkScroll)
-`
+export const NavLinks = styled(LinkScroll)`
   color: ${colors.white};
   display: flex;
   align-items: center;
@@ -88,7 +86,7 @@ export const NavLinks = styled(LinkScroll)
   }
 `;
 
-export const NavBtn = styled.nav `
+export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
 
@@ -97,8 +95,7 @@ export const NavBtn = styled.nav `
   }
 `;
 
-export const NavBtnLink = styled(LinkRouter)
-`
+export const NavBtnLink = styled(LinkRouter)`
   border-radius: 50px;
   background: ${colors.whatsapp};
   white-space: nowrap;
